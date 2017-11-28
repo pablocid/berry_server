@@ -15,7 +15,7 @@ from urllib2 import urlopen
 from cStringIO import StringIO
 from skimage import io
 import math
-
+import base64
 
 def create_opencv_image_from_stringio(img_stream, cv2_img_flag=0):
     img_stream.seek(0)
@@ -215,7 +215,7 @@ def analyzer(url):
 			(int(trbrX + 10), int(trbrY)), cv2.FONT_HERSHEY_SIMPLEX,
 			1.3, (0, 0, 255), 2)
 
-	namePic = "images/"+str(uuid.uuid1())+".jpg"
+	namePic = "/tmp/"+str(uuid.uuid1())+".jpg"
 	cv2.imwrite(namePic, orig);
 	print namePic
 	print mCoord[:]

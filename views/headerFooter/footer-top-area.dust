@@ -1,0 +1,138 @@
+<section class="footer-top-area">
+	<!-- Button trigger modal -->
+	<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#footer_top_area_modal">
+	Edit this block
+	</button>
+
+	<div class="auto-container">
+	    <div class="row">
+	        <div class="col-md-3 col-sm-6 col-xs-12">
+	            <!--Start footer-logo  item-->
+	            <div class="footer-logo">
+	               <div class="logo">
+	                    <a href="index.html"><img src="{footerTopArea.logo}" alt="Logo"></a>
+	                </div>
+	                <p>{footerTopArea.frase}</p>
+	                <div class="social-icon">
+	                	{#footerTopArea.social}
+	                    <a href="{link}"><i class="fa fa-{net}" aria-hidden="true"></i></a>
+	                    {/footerTopArea.social}
+	                </div>
+	            </div>
+	            <!--End footer-logo  item-->
+	        </div>
+	        <div class="col-md-3 col-sm-6 col-xs-12">
+	            <!--Start contact-us  item-->
+	            <div class="contact-us">
+	                <h2>Contact Us</h2>
+	                {#footerTopArea.contact}
+	                <h4>{label}</h4>
+	                <p>
+	                {#items}
+	                	{.} {@sep}<br>{/sep}
+	                {/items}
+	                </p>
+	                {/footerTopArea.contact}
+	            </div>
+	            <!--End contact-us  item-->
+	        </div>
+	        <div class="col-md-3 col-sm-6 col-xs-12">
+	            <!--Start quick-link  item-->
+	            <div class="quick-link">
+	                <h2>Quick Links</h2>
+	                <div class="row">
+	                	<div class="col-sm-6">
+	                		<ul>
+	                		{#footerTopArea.quicklinks}
+	                			<li><a href="{link}">{label}</a></li>
+	                		{/footerTopArea.quicklinks}
+	                		</ul>
+	                	</div><!-- 
+	                	<div class="col-sm-6">
+	                		<ul>
+	                			<li><a href="service-details.html">KeyWord Analytics</a></li>
+	                			<li><a href="service-details.html">Email Marketing</a></li>
+	                			<li><a href="service-details.html">Pay Per Click</a></li>
+	                		</ul>            contenteditable="true"
+	                	</div> -->
+	                </div><!-- /.row -->
+	            </div>
+	            <!--End quick-link  item-->
+	        </div>
+	        <div class="col-md-3 col-sm-6 col-xs-12">
+	            <!--Start subscribe-us  item-->
+	            <div class="subscribe-us">
+	                <h2>Subscribe to News</h2>
+	                <p>Signup for our mailing list to get latest<br>updates and news.</p>
+	                <div class="email-addres">
+	                    <input type="email" placeholder="Email Address">
+	                    <button type="submit" class="message"><i class="fa fa-envelope-o " aria-hidden="true"></i></button>
+	                    <p>Your Email id is confidential!</p>
+	                </div>
+	            </div>
+	            <!--End subscribe-us  item-->
+	        </div>
+	    </div>
+	</div>
+</section>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="footer_top_area_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body" id="modalFormContainer">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="footer_top_area_save_btn">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+	var BrutusinForms = brutusin["json-forms"];
+
+	var bf = BrutusinForms.create({footerTopAreaSchm|js|s});
+	var content = {footerTopArea|js|s};
+
+    var container = document.getElementById('modalFormContainer');
+
+	bf.render(container, content);
+
+	$('#footer_top_area_save_btn').on('click', function(){
+		if(bf.validate()){
+			console.log(bf.getData());//{_csrf}
+			$.ajax({
+			  type: "POST",
+			  url: 'save/footer-top-area',
+			  data: {'_csrf':'{_csrf}',doc: bf.getData()},
+			  success: function(){window.location.reload();},
+			  dataType: 'json'
+			});
+			/*
+			$.post('save/footer-top-area', bf.getData(), function(){
+				$('#footer_top_area_modal').modal('hide');
+				window.location.reload();
+			})
+*/
+		}else{
+			alert('the form is NOT valid');
+		}
+		
+	});
+
+    $('#footer_top_area_modal').on('shown.bs.modal', function () {
+    	
+	  $('#myInput').focus()
+	})
+
+</script>

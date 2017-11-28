@@ -1,0 +1,45 @@
+<section class="promo-area sec-padding">
+	<div class="auto-container">
+		<div class="title">
+			<h3>Full-Service Brand Management & Digital Marketing Agency</h3>
+		</div>
+		<div class="row">
+			<div class="col-md-4 col-sm-6 col-xs-12">
+				<div class="single-promo">
+					<img src="img/icons/monitor.png" alt="Awesome Image"/>
+					<h3>Digital Marketing</h3>
+					<p>We use enterprise strategies to boost<br>your local and worldwide search rankings</p>
+					<ul>
+						<li>Mobile SEO Services</li>
+						<li>Local SEO Services</li>
+						<li>Local SEO Services</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6 col-xs-12">
+				<div class="single-promo">
+					<img src="img/icons/laptop.png" alt="Awesome Image"/>
+					<h3>Pay Per Click Advertising</h3>
+					<p>We use enterprise strategies to boost<br>your local and worldwide search rankings</p>
+					<ul>
+						<li>Google Adwords</li>
+						<li>Mobile Advertising</li>
+						<li>Facebook, Youtube</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6 col-xs-12 col-lg-offset-0 col-md-offset-0 col-sm-offset-3 col-xs-offset-0">
+				<div class="single-promo">
+					<img src="img/icons/paper.png" alt="Awesome Image"/>
+					<h3>Contant Marketing</h3>
+					<p>We use enterprise strategies to boost<br>your local and worldwide search rankings</p>
+					<ul>
+						<li>Blog Writing</li>
+						<li>Landing Page Contant </li>
+						<li>Infographics & Bloggers </li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

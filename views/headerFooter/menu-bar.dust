@@ -1,0 +1,115 @@
+<header class="header stricky">
+		<div class="auto-container clearfix">
+			<div id="menuzord" class="menuzord">
+				<a href="index.html" class="menuzord-brand"><img src="{menuBar.logo}" alt="PlantBiotec"/></a>
+
+				<ul class="menuzord-menu">
+					{#menuBar.menu}
+					<li>
+					    <a {?submenu} style="cursor:pointer;" {:else} href="{link}"  {/submenu} >
+					    	{text}
+					    </a>
+					    {?submenu}
+					        <ul class="dropdown">
+					            {#submenu}
+					            <li><a href="{link}">{text}</a></li>
+					            {/submenu}
+					        </ul>
+					    {/submenu}
+					</li>
+					{/menuBar.menu}
+<!--
+					<li>
+						<a href="index.html">{menuBar.item}</a>
+						<ul class="dropdown">
+							<li><a href="index.html">Home One</a></li>
+							<li><a href="index-2.html">Home Two</a></li>
+							<li><a href="index-3.html">Home Three</a></li>
+						</ul>
+					</li>
+					<li><a href="about.html">About</a></li>
+					<li>
+						<a href="services.html">Services</a>
+						<div class="megamenu megamenu-3-4">
+							<div class="megamenu-row">
+								<div class="col4">
+									<h3>Web Development</h3>
+									<p>Web Design & Development Solutions</p>
+									<ul>
+										<li><a href="content-marking.html"><i class="fa fa-file-word-o"></i> Content Marketing</a></li>
+										<li><a href="web-design.html"><i class="fa fa-desktop"></i> Web Design</a></li>
+										<li><a href="web-development.html"><i class="fa fa-code"></i> Web Development</a></li>
+										<li><a href="mobile-marketing.html"><i class="fa fa-mobile"></i> Mobile Marketing</a></li>
+										<li><a href="digital-consultancy.html"><i class="fa fa-suitcase"></i> Digital Consultancy</a></li>
+										<li><a href="reputation.html"><i class="fa fa-trophy"></i> Reputation Marketing</a></li>
+									</ul>
+								</div>
+								<div class="col4">
+									<h3>Online Marketing</h3>
+									<p>Get More Traffic Boost Your Sales</p>
+									<ul>
+										<li><a href="seo.html"><i class="fa fa-anchor"></i> Search Engine Optimization</a></li>
+										<li><a href="ppc.html"><i class="fa fa-area-chart"></i> Pay Per Click</a></li>
+										<li><a href="local-seo.html"><i class="fa fa-map-signs"></i> Local Seo</a></li>
+										<li><a href="smm.html"><i class="fa fa-bookmark"></i> Social Media Marketing</a></li>
+										<li><a href="email-marketing.html"><i class="fa fa-envelope-o"></i> Email Marketing</a></li>
+									</ul>
+								</div>
+								<div class="col4">
+									<h3>Sales Improvment</h3>
+									<p>We do targeting for getting audience</p>
+									<ul>
+										<li><a href="cro.html"><i class="fa fa-cubes"></i> Conversation Rate Optimization</a></li>
+										<li><a href="online-presense.html"><i class="fa fa-bullhorn"></i> Online Presense Analysis</a></li>
+										<li><a href="affiliate.html"><i class="fa fa-users"></i> Affiliate Marketing</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						
+					</li>
+					<li>
+						<a href="case-study-masonary.html">Case Studies</a>
+						<ul class="dropdown">
+							<li><a href="case-study-masonary.html">Case Studies Masonary</a></li>
+							<li><a href="case-study-sidebar.html">Case Studies Sidebar</a></li>
+							<li><a href="case-study-3-col.html">Case Studies 3 Col</a></li>
+							<li><a href="case-study-5-col.html">Case Studies 5 Col</a></li>
+							<li><a href="case-study-details.html">Case Studies Details</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Pages</a>
+						<ul class="dropdown">
+							<li><a href="pricing.html">Pricing Package</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="blog.html">News</a>
+						<ul class="dropdown">
+							<li><a href="blog-details.html">News Details</a></li>
+						</ul>
+					</li>
+					<li><a href="contact.html">Contact</a></li>
+					<li class="search-button">
+						<a href="#">
+							<span class="icon-search">
+			                	<span class="path1"></span>
+		                	</span>				
+						</a>
+						<div class="megamenu megamenu-quarter-width">
+							<div class="megamenu-row">
+							   <div class="search-box">
+						   			<form action="#" class="clearfix">
+						   				<input type="text" class="pull-left" placeholder="Type Something"/>
+						   				<button class="pull-right" type="submit"><i class="fa fa-search"></i></button>
+						   			</form>
+						   		</div><
+							</div>      
+						</div>
+					</li> 
+-->
+				</ul>
+			</div>
+		</div>
+	</header>

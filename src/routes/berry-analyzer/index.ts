@@ -1,0 +1,1 @@
+export {BerryAnalyzerRoute} from './berry-analyzer.route';

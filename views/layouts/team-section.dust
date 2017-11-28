@@ -1,0 +1,122 @@
+<section class="team-section sec-padding">
+	<div class="auto-container">
+		<div class="sec-title light text-center">
+			<h3>Why Choose Digital Media</h3>
+			<p>Grow your business and save time with seamless experience</p>
+		</div>		
+		<div class="owl-carousel owl-theme team-carousel text-center">
+			<div class="item">
+				<div class="single-team-carousel">
+					<img src="img/team/1.png" alt="Awesome Image"/>
+					<h3>Stevan Smith</h3>
+					<p>SEO Analyst</p>
+				</div><!-- /.single-team-carousel -->
+			</div><!-- /.item -->
+			<div class="item">
+				<div class="single-team-carousel">
+					<img src="img/team/2.png" alt="Awesome Image"/>
+					<h3>Stevan Smith</h3>
+					<p>SEO Analyst</p>
+				</div><!-- /.single-team-carousel -->
+			</div><!-- /.item -->
+			<div class="item">
+				<div class="single-team-carousel">
+					<img src="img/team/3.png" alt="Awesome Image"/>
+					<h3>Stevan Smith</h3>
+					<p>SEO Analyst</p>
+				</div><!-- /.single-team-carousel -->
+			</div><!-- /.item -->
+			<div class="item">
+				<div class="single-team-carousel">
+					<img src="img/team/4.png" alt="Awesome Image"/>
+					<h3>Stevan Smith</h3>
+					<p>SEO Analyst</p>
+				</div><!-- /.single-team-carousel -->
+			</div><!-- /.item -->
+			<div class="item">
+				<div class="single-team-carousel">
+					<img src="img/team/1.png" alt="Awesome Image"/>
+					<h3>Stevan Smith</h3>
+					<p>SEO Analyst</p>
+				</div><!-- /.single-team-carousel -->
+			</div><!-- /.item -->
+			<div class="item">
+				<div class="single-team-carousel">
+					<img src="img/team/2.png" alt="Awesome Image"/>
+					<h3>Stevan Smith</h3>
+					<p>SEO Analyst</p>
+				</div><!-- /.single-team-carousel -->
+			</div><!-- /.item -->
+			<div class="item">
+				<div class="single-team-carousel">
+					<img src="img/team/3.png" alt="Awesome Image"/>
+					<h3>Stevan Smith</h3>
+					<p>SEO Analyst</p>
+				</div><!-- /.single-team-carousel -->
+			</div><!-- /.item -->
+			<div class="item">
+				<div class="single-team-carousel">
+					<img src="img/team/4.png" alt="Awesome Image"/>
+					<h3>Stevan Smith</h3>
+					<p>SEO Analyst</p>
+				</div><!-- /.single-team-carousel -->
+			</div><!-- /.item -->
+			<div class="item">
+				<div class="single-team-carousel">
+					<img src="img/team/1.png" alt="Awesome Image"/>
+					<h3>Stevan Smith</h3>
+					<p>SEO Analyst</p>
+				</div><!-- /.single-team-carousel -->
+			</div><!-- /.item -->
+			<div class="item">
+				<div class="single-team-carousel">
+					<img src="img/team/2.png" alt="Awesome Image"/>
+					<h3>Stevan Smith</h3>
+					<p>SEO Analyst</p>
+				</div><!-- /.single-team-carousel -->
+			</div><!-- /.item -->
+			<div class="item">
+				<div class="single-team-carousel">
+					<img src="img/team/3.png" alt="Awesome Image"/>
+					<h3>Stevan Smith</h3>
+					<p>SEO Analyst</p>
+				</div><!-- /.single-team-carousel -->
+			</div><!-- /.item -->
+			<div class="item">
+				<div class="single-team-carousel">
+					<img src="img/team/4.png" alt="Awesome Image"/>
+					<h3>Stevan Smith</h3>
+					<p>SEO Analyst</p>
+				</div><!-- /.single-team-carousel -->
+			</div><!-- /.item -->
+			<div class="item">
+				<div class="single-team-carousel">
+					<img src="img/team/1.png" alt="Awesome Image"/>
+					<h3>Stevan Smith</h3>
+					<p>SEO Analyst</p>
+				</div><!-- /.single-team-carousel -->
+			</div><!-- /.item -->
+			<div class="item">
+				<div class="single-team-carousel">
+					<img src="img/team/2.png" alt="Awesome Image"/>
+					<h3>Stevan Smith</h3>
+					<p>SEO Analyst</p>
+				</div><!-- /.single-team-carousel -->
+			</div><!-- /.item -->
+			<div class="item">
+				<div class="single-team-carousel">
+					<img src="img/team/3.png" alt="Awesome Image"/>
+					<h3>Stevan Smith</h3>
+					<p>SEO Analyst</p>
+				</div><!-- /.single-team-carousel -->
+			</div><!-- /.item -->
+			<div class="item">
+				<div class="single-team-carousel">
+					<img src="img/team/4.png" alt="Awesome Image"/>
+					<h3>Stevan Smith</h3>
+					<p>SEO Analyst</p>
+				</div><!-- /.single-team-carousel -->
+			</div><!-- /.item -->
+		</div><!-- /.owl-carousel owl-theme team-carousel -->
+	</div><!-- /.auto-container -->
+</section><!-- /.team-section -->

@@ -1,0 +1,11 @@
+{>"layouts/master" /}
+
+{<body}
+<script type="text/javascript">
+	
+
+	createCookie("auth-token", "kldjsflkjsldf987**+oY(/&(IGUytyr57FYFYDGF#EDdgdgfdgdgdgfdgdgfdgfdgf9879d8sf798sa7dfakjshdfjksahdkfuas8idf7y98asd67f9", 1);
+	redirect('/');
+
+</script>
+{/body}

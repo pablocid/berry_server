@@ -1,0 +1,34 @@
+<section class="service-features-two sec-padding gray-bg">
+	<div class="auto-container">
+		<div class="row">
+			<div class="col-md-6 col-sm-6">
+				<img src="img/resources/mockup-4.jpg" alt="Awesome Image"/>
+			</div><!-- /.col-md-6 -->
+			<div class="col-md-6 col-sm-6">
+				<div class="right-text">
+					<div class="sec-title">
+						<h3>Strategic Plan Development</h3>
+						<p>Built so XPO has full control over every part of their website</p>
+					</div><!-- /.sec-title -->
+					<p>But I must explain to you how al this taken ideas of denouncing easure is and litespraisings pain.I must explain to you how all taken but ideas of denouncing. Incorper pretium sollicitmagna hendrerit.. </p>
+					<div class="row">
+						<div class="col-md-6">
+							<ul>
+								<li>Increase In Page 1 Ranking</li>
+								<li>Conversion Rate Optimization</li>
+								<li>Increasing Page Traffic</li>
+							</ul>
+						</div><!-- /.col-md-6 -->
+						<div class="col-md-6">
+							<ul>
+								<li>On Page SEO Optimization</li>
+								<li>Average Visit Duration</li>
+								<li>Average Visit Duration</li>
+							</ul>
+						</div><!-- /.col-md-6 -->
+					</div><!-- /.row -->
+				</div><!-- /.right-text -->
+			</div><!-- /.col-md-6 -->
+		</div><!-- /.row -->
+	</div><!-- /.auto-container -->
+</section><!-- /.service-features-two -->

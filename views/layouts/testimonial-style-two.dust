@@ -1,0 +1,15 @@
+<section class="testimonial-style-two sec-padding text-center">
+	<div class="auto-container">
+		<div class="title">
+			<h3>Words Form Our Clients</h3>
+		</div><!-- /.title -->
+		<div class="single-testimonial-two">
+			<img src="img/resources/testimonial-2.png" alt="Awesome Image" >			
+			<p>“We enjoy sharing the projects and posts we make just as much <br /> as we enjoy creating them. Sit back & take a moment to browse through <br /> some of our recent completed work.”</p>
+			<div class="info-box">
+				<h4>Rick Grimes</h4>
+				<span>CEO-Founder</span>
+			</div><!-- /.info-box -->
+		</div><!-- /.single-testimonial-two -->
+	</div><!-- /.auto-container -->
+</section><!-- /.testimonial-style-two -->

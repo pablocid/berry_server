@@ -1,0 +1,108 @@
+<section id="top-bar">
+	<!-- Button trigger modal -->
+	<button type="button" style="position:absolute;" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#{topBar.id}_modal">
+		Edit {topBar.id}
+	</button>
+	<div class="auto-container clearfix">
+		<div class="left-info pull-left">
+			<p>{topBar.data.title} </p>
+		</div>
+		<div class="right-info pull-right">
+			<ul>
+				<li>
+					<i class="icon-man"></i>
+					
+					<!--<a href="#">register</a> <a id="top-bar-login-btn" href="#">login</a>-->
+					<!-- Button trigger modal -->
+					<a style="cursor:pointer;" type="button" data-toggle="modal" data-target="#top-bar-login-modal">
+					  	{topBar.data.labelLogin}
+					</a>
+				</li>
+				<li>
+					<i class="icon-globe"></i>
+					<select class="selectpicker" title="{topBar.labels.language}">
+						{#topBar.data.languages}
+					  <option value={link}>{label}</option>
+						{/topBar.data.languages}
+					</select>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="top-bar-login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">{topBar.data.modal.title}</h4>
+      </div>
+      <div class="modal-body">
+        <form method="POST" action="/login">
+        	<div class="input-group">
+				<span class="input-group-addon" id="basic-addon1">email</span>
+				<input type="text" name="email" class="form-control" placeholder="hprieto@inia.cl">
+			</div>
+			<div class="input-group">
+				<span class="input-group-addon" id="basic-addon1">password</span>
+				<input type="text" name="password" class="form-control" placeholder="*****">
+			</div>
+			<input name="_csrf" type="hidden" value="{_csrf}">
+			<div class="input-group">
+				<input type="submit" class="form-control btn btn-primary" value="{topBar.data.modal.loginBtn}">
+			</div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">{topBar.data.modal.closeBtn}</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="{topBar.id}_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel_{topBar.id}">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel_{topBar.id}">Modal title</h4>
+      </div>
+      <div class="modal-body" id="modalFormContainer_{topBar.id}">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="{topBar.id}_save_btn">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+	var Brutusin_{topBar.id} = brutusin["json-forms"];
+	var bf_{topBar.id} = Brutusin_{topBar.id}.create({topBar.schema|js|s});
+	var content_{topBar.id} = {topBar.data|js|s};
+    var container_{topBar.id} = document.getElementById('modalFormContainer_{topBar.id}');
+
+	bf_{topBar.id}.render(container_{topBar.id}, content_{topBar.id});
+
+	$('#{topBar.id}_save_btn').on('click', function(){
+		if(bf_{topBar.id}.validate()){
+			$.ajax({
+			  type: "POST",
+			  url: "{topBar.postUrl}",
+			  data: {data: bf_{topBar.id}.getData()},
+			  success: function(){ window.location.reload(); },
+			  error:function(err){ console.log(err); },
+			  dataType: 'json'
+			});
+		}else{ alert('the form is NOT valid'); }
+	});
+
+</script>

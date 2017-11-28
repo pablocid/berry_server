@@ -1,0 +1,117 @@
+{
+    "$schema": "http://json-schema.org/draft-03/schema#",
+    "type": "object",
+    "properties": {
+        "logo": {
+            "type": "string",
+            "title": "Url logo picture",
+            "description": "Paste the url picture path in this field",
+            "required": true
+        },
+        "logoLink": {
+            "type": "string",
+            "title": "Url link picture",
+            "description": "Paste the url of link in this field",
+            "required": false
+        },
+        "frase": {
+            "type": "string",
+            "format": "text",
+            "title": "Inspirational phrase",
+            "description": "Make an inspirational phrase from the Lab to the world.",
+            "required": false
+        },
+        "social": {
+            "type": "array",
+            "title": "Social networks",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "net": {
+                        "type": "string",
+                        "title": "Field name",
+                        "enum": ["facebook", "twitter", "google-plus", "linkedin"]
+                    },
+                    "link": {
+                        "type": "string",
+                        "title": "Url of the social network"
+                    }
+                }
+            }
+        },
+        "contact": {
+            "type": "array",
+            "title": "Contact Us",
+            "items": {
+                "description": "Contact options",
+                "type": "object",
+                "properties": {
+                    "label": {
+                        "type": "string",
+                        "title": "Label",
+                        "description": "Label of contact option",
+                        "required": true
+                    },
+                    "items": {
+                        "type": "array",
+                        "title": "Info option",
+                        "items": {
+                            "type": "string",
+                            "description": "",
+                            "required": true
+                        }
+                    }
+                }
+            }
+        },
+        "quicklinks": {
+            "type": "array",
+            "title": "Quick Links",
+            "items": {
+                "description": "Link",
+                "type": "object",
+                "properties": {
+                    "label": {
+                        "type": "string",
+                        "title": "Label",
+                        "description": "Link label",
+                        "required": true
+                    },
+                    "link": {
+                        "type": "string",
+                        "title": "Url address",
+                        "required": true
+                    }
+                }
+            }
+        },
+        "subscribeNews": {
+            "type": "object",
+            "title": "SubscribeNews",
+            "properties": {
+                "label": {
+                    "type": "string",
+                    "title": "Label",
+                    "description": "Link label",
+                    "required": true
+                },
+                "description": {
+                    "type": "string",
+                    "title": "description",
+                    "description": "Description",
+                    "required": false
+                },
+                "consideration": {
+                    "type": "string",
+                    "title": "consideration",
+                    "required": false
+                },
+                "placeholder": {
+                    "type": "string",
+                    "title": "placeholder",
+                    "required": false
+                }
+            }
+        }
+    }
+}

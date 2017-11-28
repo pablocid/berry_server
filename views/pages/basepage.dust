@@ -1,0 +1,10 @@
+{>"base/master" /}
+
+{<body}
+	{>"layouts/top-bar" /}
+	{>"layouts/menu-bar" /}
+    {+content/}
+	{>"layouts/footer-top-area" /}
+	{>"layouts/footer-bottom-area" /}
+
+{/body}

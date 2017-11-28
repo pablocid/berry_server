@@ -1,0 +1,30 @@
+<section class="fact-counter">
+	<div class="auto-container">
+		<div class="row">
+			<div class="col-md-3 col-sm-6 col-xs-12">
+				<div class="single-fact-counter text-center">
+					<h3>98%</h3>
+					<p>client retention</p>
+				</div><!-- /.single-fact-counter -->
+			</div><!-- /.col-md-3 -->
+			<div class="col-md-3 col-sm-6 col-xs-12">
+				<div class="single-fact-counter text-center">
+					<h3>12</h3>
+					<p>Years of Service</p>
+				</div><!-- /.single-fact-counter -->
+			</div><!-- /.col-md-3 -->
+			<div class="col-md-3 col-sm-6 col-xs-12">
+				<div class="single-fact-counter text-center">
+					<h3>350+</h3>
+					<p>Professionals</p>
+				</div><!-- /.single-fact-counter -->
+			</div><!-- /.col-md-3 -->
+			<div class="col-md-3 col-sm-6 col-xs-12">
+				<div class="single-fact-counter text-center no-border">
+					<h3>4000+</h3>
+					<p>Satisfied Clients</p>
+				</div><!-- /.single-fact-counter -->
+			</div><!-- /.col-md-3 -->
+		</div><!-- /.row -->
+	</div><!-- /.auto-container -->
+</section><!-- /.fact-counter -->

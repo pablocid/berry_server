@@ -1,0 +1,13 @@
+{>"pages/basepage" /}
+
+{<content}
+{>"layouts/service-features" /}
+ <h1>HOLLAAA</h1>
+ <h2>{user}</h2>
+ <h3>kjasflkajdklfajlk</h3>
+ <h4>{pepe}</h4>
+ <form action="/form_response" method="POST" encType="multipart/form-data">
+    <input type="file" name="archivo">
+    <input type="submit" value="enviar archivo">
+ </form>
+{/content}

@@ -1,0 +1,1 @@
+export { DataPartialRoute } from './partials';

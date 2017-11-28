@@ -1,0 +1,40 @@
+<section class="get-a-qoute sec-padding">
+	<div class="auto-container">
+		<div class="sec-title text-center">
+			<h3>Get Started Now</h3>
+			<p>Grow your business and save time with seamless experience</p>
+		</div>
+		<form action="#" class="row">
+			<div class="col-md-6">
+				<div class="form-group">
+					<input type="text" placeholder="Name" />
+				</div><!-- /.form-group -->
+				<div class="form-group">
+					<input type="text" placeholder="Website" />
+				</div><!-- /.form-group -->
+			</div><!-- /.col-md-6 -->
+			<div class="col-md-6">
+				<div class="form-group">
+					<input type="text" placeholder="Email" />
+				</div><!-- /.form-group -->
+				<div class="form-group">
+					<input type="text" placeholder="Phone" />
+				</div><!-- /.form-group -->
+			</div><!-- /.col-md-6 -->
+			<div class="col-md-12">
+				<div class="form-group">
+					<textarea placeholder="Your Comments"></textarea>				
+				</div><!-- /.form-group -->
+			</div><!-- /.col-md-12 -->
+			<div class="col-md-12">
+				<div class="form-group clearfix">
+					<div class="checkbox pull-left">
+						<input type="checkbox" /> <span>Receive Free Marketing Tips</span>
+					</div><!-- /.checkbox pull-left -->
+					<button class="pull-right" type="submit">Get a Qoute</button>
+				</div><!-- /.form-group -->
+			</div><!-- /.col-md-12 -->
+		</form>
+	</div><!-- /.auto-container -->
+</section><!-- /.get-started sec-padding -->
+

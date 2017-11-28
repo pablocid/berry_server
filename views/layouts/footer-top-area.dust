@@ -1,0 +1,122 @@
+<section class="footer-top-area">
+	<!-- Button trigger modal -->
+	<button type="button" style="position:absolute;" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#{footerTopArea.id}_modal">
+		Edit {footerTopArea.id}
+	</button>
+
+	<div class="auto-container">
+	    <div class="row">
+	        <div class="col-md-3 col-sm-6 col-xs-12">
+	            <!--Start footer-logo  item-->
+	            <div class="footer-logo">
+	               <div class="logo">
+	                    <a href="index.html"><img src="{footerTopArea.data.logo}" alt="Logo"></a>
+	                </div>
+	                <p>{footerTopArea.data.frase}</p>
+	                <div class="social-icon">
+	                	{#footerTopArea.data.social}
+	                    <a href="{link}"><i class="fa fa-{net}" aria-hidden="true"></i></a>
+	                    {/footerTopArea.data.social}
+	                </div>
+	            </div>
+	            <!--End footer-logo  item-->
+	        </div>
+	        <div class="col-md-3 col-sm-6 col-xs-12">
+	            <!--Start contact-us  item-->
+	            <div class="contact-us">
+	                <h2>Contact Us</h2>
+	                {#footerTopArea.data.contact}
+	                <h4>{label}</h4>
+	                <p>
+	                {#items}
+	                	{.} {@sep}<br>{/sep}
+	                {/items}
+	                </p>
+	                {/footerTopArea.data.contact}
+	            </div>
+	            <!--End contact-us  item-->
+	        </div>
+	        <div class="col-md-3 col-sm-6 col-xs-12">
+	            <!--Start quick-link  item-->
+	            <div class="quick-link">
+	                <h2>Quick Links</h2>
+	                <div class="row">
+	                	<div class="col-sm-6">
+	                		<ul>
+	                		{#footerTopArea.data.quicklinks}
+	                			<li><a href="{link}">{label}</a></li>
+	                		{/footerTopArea.data.quicklinks}
+	                		</ul>
+	                	</div><!-- 
+	                	<div class="col-sm-6">
+	                		<ul>
+	                			<li><a href="service-details.html">KeyWord Analytics</a></li>
+	                			<li><a href="service-details.html">Email Marketing</a></li>
+	                			<li><a href="service-details.html">Pay Per Click</a></li>
+	                		</ul>            contenteditable="true"
+	                	</div> -->
+	                </div><!-- /.row -->
+	            </div>
+	            <!--End quick-link  item-->
+	        </div>
+	        <div class="col-md-3 col-sm-6 col-xs-12">
+	            <!--Start subscribe-us  item-->
+	            <div class="subscribe-us">
+	                <h2>{footerTopArea.data.subscribeNews.label}</h2>
+	                <p>{footerTopArea.data.subscribeNews.description}</p>
+	                <div class="email-addres">
+	                    <input type="email" placeholder="{footerTopArea.data.subscribeNews.placeholder}">
+	                    <button type="submit" class="message"><i class="fa fa-envelope-o " aria-hidden="true"></i></button>
+	                    <p>{footerTopArea.data.subscribeNews.consideration}</p>
+	                </div>
+	            </div>
+	            <!--End subscribe-us  item-->
+	        </div>
+	    </div>
+	</div>
+</section>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="{footerTopArea.id}_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel_{footerTopArea.id}">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel_{footerTopArea.id}">Modal title</h4>
+      </div>
+      <div class="modal-body" id="modalFormContainer_{footerTopArea.id}">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="{footerTopArea.id}_save_btn">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+	var Brutusin_{footerTopArea.id} = brutusin["json-forms"];
+	var bf_{footerTopArea.id} = Brutusin_{footerTopArea.id}.create({footerTopArea.schema|js|s});
+	var content_{footerTopArea.id} = {footerTopArea.data|js|s};
+    var container_{footerTopArea.id} = document.getElementById('modalFormContainer_{footerTopArea.id}');
+
+	bf_{footerTopArea.id}.render(container_{footerTopArea.id}, content_{footerTopArea.id});
+
+	$('#{footerTopArea.id}_save_btn').on('click', function(){
+		if(bf_{footerTopArea.id}.validate()){
+			$.ajax({
+			  type: "POST",
+			  url: "{footerTopArea.postUrl}",
+			  data: {data: bf_{footerTopArea.id}.getData()},
+			  success: function(){ window.location.reload(); },
+			  error:function(err){ console.log(err); },
+			  dataType: 'json'
+			});
+		}else{ alert('the form is NOT valid'); }
+	});
+
+</script>

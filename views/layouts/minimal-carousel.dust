@@ -1,0 +1,63 @@
+<div id="minimal-bootstrap-carousel" class="carousel slide carousel-fade shop-slider" data-ride="carousel">           
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active slide-1" style="background-image: url(img/slider/1.jpg);backgroudn-position: center right;">
+            
+            <div class="carousel-caption">
+	      		<div class="thm-container">
+	      			<div class="box valign-middle">
+	      				<div class="content">
+		      				<div class="digital-banner-title" data-animation="animated fadeInUp">
+		      					<h2>Let us grow your<br>website traffic</h2>
+		      				</div>
+		      				<div class="digital-banner-p" data-animation="animated fadeInDown">We use enterprise strategies to boost your local and worldwide<br>search rankings so your customers can find you when & where<br>they need</div>
+		      				<a href="services.html" class="btn btn-default banner-btn" data-animation="animated zoomIn">Learn More</a>
+	      				</div>
+	      			</div>
+	      		</div>
+	    	</div>                
+        </div>
+        <div class="item  slide-2" style="background-image: url(img/slider/2.jpg);backgroudn-position: center right;">
+            
+            <div class="carousel-caption">
+	      		<div class="thm-container">
+	      			<div class="box valign-top">
+	      				<div class="content text-center">
+		      				<div class="digital-banner-title" data-animation="animated fadeInUp">
+		      					<h2>Let us grow your website traffic</h2>
+		      				</div>
+		      				<div class="digital-banner-p" data-animation="animated fadeInDown">We use enterprise strategies to boost your local and worldwide search rankings<br>so your customers can find you when & where they need</div>
+		      				<a href="services.html" class="btn btn-default banner-btn" data-animation="animated zoomIn">Learn More</a> <br>
+		      				<img data-animation="animated fadeInUp" src="img/slider/mockup.png"  alt="Awesome Image"/>
+	      				</div>
+	      			</div>
+	      		</div>
+	    	</div>                
+        </div>
+        <div class="item  slide-3" style="background-image: url(img/slider/3.jpg);backgroudn-position: center right;">
+            
+            <div class="carousel-caption">
+	      		<div class="thm-container">
+	      			<div class="box valign-middle">
+	      				<div class="content">
+		      				<div class="digital-banner-title" data-animation="animated fadeInUp">
+		      					<h2>Let us grow your<br>website traffic</h2>
+		      				</div>
+		      				<div class="digital-banner-p" data-animation="animated fadeInDown">We use enterprise strategies to boost your local and worldwide<br>search rankings so your customers can find you when & where<br>they need</div>
+		      				<a href="services.html" class="btn btn-default banner-btn" data-animation="animated zoomIn">Learn More</a>
+	      				</div>
+	      			</div>
+	      		</div>
+	    	</div>                
+        </div>
+    </div>
+    <!-- Controls -->
+    <a class="left carousel-control" href="#minimal-bootstrap-carousel" role="button" data-slide="prev">
+        <i class="fa fa-angle-left"></i>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#minimal-bootstrap-carousel" role="button" data-slide="next">
+        <i class="fa fa-angle-right"></i>
+        <span class="sr-only">Next</span>
+    </a>
+</div>

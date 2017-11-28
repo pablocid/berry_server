@@ -1,0 +1,18 @@
+<section class="challenge-box">
+	<div class="auto-container">
+		<div class="row">
+			<div class="col-md-8 col-sm-7 col-xs-12 pull-left">
+				<h2>Challenge</h2>
+				<p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta suntus explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione sag voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velite sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam.</p>
+			</div><!-- /.col-md-8 pull-left -->
+			<div class="col-md-3 col-sm-4 pull-right">
+				<ul>
+					<li><span>Client:</span> Mark Luvano</li>
+					<li><span>Project type:</span> Digital Marketing</li>
+					<li><span>Website:</span> <a href="#">http://www.themeforest.com</a></li>
+				</ul>
+			</div><!-- /.col-md-3 pull-right -->
+		</div><!-- /.row -->
+	</div><!-- /.auto-container -->
+</section><!-- /.challenge-box -->
+

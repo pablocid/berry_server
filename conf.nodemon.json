@@ -1,0 +1,21 @@
+{
+    "restartable": "rs",
+    "ignore": [
+        ".git",
+        "node_modules/**/node_modules"
+    ],
+    "verbose": true,
+    "events": {
+        "start": "echo starting ...",
+        "restart": "echo restarting ...",
+        "exit": " echo exiting ...."
+    },
+    "watch": [
+        "dist/",
+        "views/"
+    ],
+    "env": {
+        "NODE_ENV": "development"
+    },
+    "ext": "js json html dust"
+}

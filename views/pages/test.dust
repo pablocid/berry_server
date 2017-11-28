@@ -1,0 +1,35 @@
+{>"layouts/master" /}
+
+{<body}
+	{>"layouts/top-bar" /}
+	{>"layouts/menu-bar" /}
+	{>"layouts/service-features" /}
+	{>"layouts/minimal-carousel" /}
+	{>"layouts/promo-area" /}
+	{>"layouts/why-choose-us" /}
+	{>"layouts/home-cta" /}
+	{>"layouts/case-study" /}
+	{>"layouts/pricing-section" /}
+	{>"layouts/testimonial-section" /}
+	{>"layouts/client-carousel" /}
+	{>"layouts/latest-news-area" /}
+	{>"layouts/real-time-analytics" /}
+	{>"layouts/fact-counter" /}
+	{>"layouts/service-features-two" /}
+	{>"layouts/service-section" /}
+	{>"layouts/testimonial-style-two" /}
+	{>"layouts/get-a-qoute" /}
+	{>"layouts/inner-banner" /}
+	{>"layouts/about-info" /}
+	{>"layouts/team-section" /}
+	{>"layouts/chart-section" /}
+	{>"layouts/case-study-masonary" /}
+	{>"layouts/blog-page" /}
+	{>"layouts/challenge-box" /}
+
+
+
+	{>"layouts/footer-top-area" /}
+	{>"layouts/footer-bottom-area" /}
+
+{/body}

@@ -1,0 +1,10 @@
+<section class="home-cta">
+	<div class="auto-container clearfix">
+		<div class="left-text pull-left">
+			<p>Awesome I would like to start a Project Now</p>
+		</div>
+		<div class="right-text pull-right">
+			<a href="case-study-5-col.html" class="btn btn-default">View All Project</a>
+		</div>
+	</div>
+</section>

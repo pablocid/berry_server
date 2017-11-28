@@ -1,0 +1,54 @@
+{
+    "$schema": "http://json-schema.org/draft-03/schema#",
+    "type": "object",
+    "properties": {
+        "logoUrl": {
+            "type": "string",
+            "title": "ruta de la foto del logo",
+            "required": true
+        },
+        "menu": {
+            "type": "array",
+            "title": "Menú principal",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "label": {
+                        "type": "string",
+                        "title": "Label",
+                        "required": true
+                    },
+                    "link": {
+                        "type": "string",
+                        "title": "link string"
+                    },
+                    "submenu": {
+                        "type": "array",
+                        "title": "submenu",
+                        "items": {
+                            "type": "object",
+                            "title": "submenú",
+                            "properties": {
+                                "label": {
+                                    "type": "string",
+                                    "title": "Label",
+                                    "required": true
+                                },
+                                "link": {
+                                    "type": "string",
+                                    "title": "link to submenu"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "title": {
+            "type": "string",
+            "title": "Título de menú",
+            "description": "título de la barra principal del sitio",
+            "required": true
+        }
+    }
+}

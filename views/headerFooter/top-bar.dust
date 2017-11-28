@@ -1,0 +1,59 @@
+<section id="top-bar">
+	<div class="auto-container clearfix">
+		<div class="left-info pull-left">
+			<p>Laboratory Plant Biotechnology </p>
+		</div>
+		<div class="right-info pull-right">
+			<ul>
+				<li>
+					<i class="icon-man"></i>
+					
+					<!--<a href="#">register</a> <a id="top-bar-login-btn" href="#">login</a>-->
+					<!-- Button trigger modal -->
+					<a style="cursor:pointer;" type="button" data-toggle="modal" data-target="#top-bar-login-modal">
+					  	login
+					</a>
+				</li>
+				<li>
+					<i class="icon-globe"></i>
+					<select class="selectpicker" title="Language">
+					  <option>English</option>
+					  <!--<option>Arabic</option>
+					  <option>Hindi</option>-->
+					</select>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="top-bar-login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Admin Area</h4>
+      </div>
+      <div class="modal-body">
+        <form method="POST" action="/login">
+        	<div class="input-group">
+				<span class="input-group-addon" id="basic-addon1">email</span>
+				<input type="text" name="email" class="form-control" placeholder="nezio@nezio.cl">
+			</div>
+			<div class="input-group">
+				<span class="input-group-addon" id="basic-addon1">password</span>
+				<input type="text" name="password" class="form-control" placeholder="*****">
+			</div>
+			<input name="_csrf" type="hidden" value="{_csrf}">
+			<div class="input-group">
+				<input type="submit" class="form-control btn btn-primary" value="login">
+			</div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

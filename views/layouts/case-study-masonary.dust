@@ -1,0 +1,126 @@
+<section class="case-study-masonary sec-padding">
+	<div class="auto-container">
+		<ul class="post-filter text-center">
+			<li class="active" data-filter=".filter-item"><span>all</span></li>
+			<li data-filter=".ecommerce"><span>ecommerce</span></li>
+			<li data-filter=".featured"><span>featured</span></li>
+			<li data-filter=".seo"><span>seo</span></li>
+			<li data-filter=".technology"><span>technology</span></li>
+		</ul><!-- /.post-filter -->
+		<div class="row filter-layout masonary-layout">
+			<div class="col-md-6 col-sm-6 col-xs-12 filter-item ecommerce featured">
+				<div class="single-case-study">
+					<div class="img-box">
+						<img src="img/case-study/m-1.jpg" alt="Awesome Image"/>
+						<div class="overlay">
+							<div class="box">
+								<div class="content">
+									<a href="case-study-details.html"><i class="fa fa-expand"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="text-box">
+						<h3>The Basic Of SEO</h3>
+						<p>Project, Trends</p>
+					</div><!-- /.text-box -->
+				</div><!-- /.single-case-study -->
+			</div><!-- /.col-md-6 filter-item -->
+			<div class="col-md-6 col-sm-6 col-xs-12 filter-item seo technology">
+				<div class="single-case-study">
+					<div class="img-box">
+						<img src="img/case-study/m-2.jpg" alt="Awesome Image"/>
+						<div class="overlay">
+							<div class="box">
+								<div class="content">
+									<a href="case-study-details.html"><i class="fa fa-expand"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="text-box">
+						<h3>Contant Strategy</h3>
+						<p>Project, Trends</p>
+					</div><!-- /.text-box -->
+				</div><!-- /.single-case-study -->
+			</div><!-- /.col-md-6 filter-item -->
+			<div class="col-md-6 col-sm-6 col-xs-12 filter-item ecommerce featured">
+				<div class="single-case-study">
+					<div class="img-box">
+						<img src="img/case-study/m-3.jpg" alt="Awesome Image"/>
+						<div class="overlay">
+							<div class="box">
+								<div class="content">
+									<a href="case-study-details.html"><i class="fa fa-expand"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="text-box">
+						<h3>The Mobile Games</h3>
+						<p>Project, Trends</p>
+					</div><!-- /.text-box -->
+				</div><!-- /.single-case-study -->
+			</div><!-- /.col-md-6 filter-item -->
+			<div class="col-md-6 col-sm-6 col-xs-12 filter-item seo technology">
+				<div class="single-case-study">
+					<div class="img-box">
+						<img src="img/case-study/m-4.jpg" alt="Awesome Image"/>
+						<div class="overlay">
+							<div class="box">
+								<div class="content">
+									<a href="case-study-details.html"><i class="fa fa-expand"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="text-box">
+						<h3>Coding Strategy</h3>
+						<p>Project, Trends</p>
+					</div><!-- /.text-box -->
+				</div><!-- /.single-case-study -->
+			</div><!-- /.col-md-6 filter-item -->
+			<div class="col-md-6 col-sm-6 col-xs-12 filter-item ecommerce technology">
+				<div class="single-case-study">
+					<div class="img-box">
+						<img src="img/case-study/m-5.jpg" alt="Awesome Image"/>
+						<div class="overlay">
+							<div class="box">
+								<div class="content">
+									<a href="case-study-details.html"><i class="fa fa-expand"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="text-box">
+						<h3>New Designing Trends</h3>
+						<p>Project, Trends</p>
+					</div><!-- /.text-box -->
+				</div><!-- /.single-case-study -->
+			</div><!-- /.col-md-6 filter-item -->
+			<div class="col-md-6 col-sm-6 col-xs-12 filter-item ecommerce technology">
+				<div class="single-case-study">
+					<div class="img-box">
+						<img src="img/case-study/m-6.jpg" alt="Awesome Image"/>
+						<div class="overlay">
+							<div class="box">
+								<div class="content">
+									<a href="case-study-details.html"><i class="fa fa-expand"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="text-box">
+						<h3>New Marketing Ideas</h3>
+						<p>Project, Trends</p>
+					</div><!-- /.text-box -->
+				</div><!-- /.single-case-study -->
+			</div><!-- /.col-md-6 filter-item -->
+		</div><!-- /.row filter-layout -->
+		<ul class="post-navigation text-center list-inline">
+			<li><span>1</span></li>
+			<li><a href="#">2</a></li>
+			<li><a class="next" href="#">Next</a></li>
+		</ul><!-- /.post-navigation list-inline -->
+	</div><!-- /.auto-container -->
+</section><!-- /.case-study-masonary sec-padding -->

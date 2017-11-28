@@ -1,0 +1,13 @@
+{
+    "restartable": "rs",
+    "verbose": false,
+    "events": {
+        "start": "echo starting ...",
+        "restart": "echo restarting ...",
+        "exit": " echo exiting ...."
+    },
+    "env": {
+        "NODE_ENV": "production"
+    },
+    "ext": "js json html dust"
+}

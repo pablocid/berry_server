@@ -1,0 +1,21 @@
+<section class="footer-bottom-area">
+	    <div class="auto-container">
+	        <div class="clearfix">  
+				<div class="pull-left footer-right">
+					<div class="coppy-right"><p>&copy; 2016 All Rights Reserved</p></div>
+				</div>
+				<div class="pull-right footer-right">
+	                <div class="footer-menu">
+	                    <ul class="">
+	                        <li class="active"><a href="#">Home</a></li>
+	                        <li><a href="#">about</a></li>
+	                        <li><a href="#">Services</a></li>
+	                        <li><a href="#">Case Studies</a></li>
+	                        <li><a href="#">privacy policy</a></li>
+	                        <li><a href="#">Terms&condition</a></li>
+	                    </ul>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</section>

@@ -1,0 +1,20 @@
+<section class="about-info sec-padding">
+	<div class="auto-container">
+		<div class="row">
+			<div class="col-md-6">
+				<img src="img/resources/mockup-2.png"  alt="Awesome Image"/>
+			</div><!-- /.col-md-6 -->
+			<div class="col-md-6">
+				<div class="right-text">
+					<div class="sec-title">
+						<p>The Small Story About us</p>
+						<h3>Why Choose Digital Media</h3>						
+					</div>
+					<p>We developed a phased approach to do SEO. The SEO Workflow provides improvement tasks. Filtering and sorting options allows you to manage tasks fast and easy. The tasks are supported by clear problem description,</p>
+					<p>WordPress users have unique guides to optimize for that CMS system.In SEO, it is important to not blindly start optimize your website on the keywords you want to rank for. There are competitors that also might optimize their websites. Knowing what makes your competitors show up high in the search engines.</p>
+					<a href="#" class="btn btn-default">Read More</a>
+				</div><!-- /.right-text -->
+			</div><!-- /.col-md-6 -->
+		</div><!-- /.row -->
+	</div><!-- /.auto-container -->
+</section><!-- /.about-info -->

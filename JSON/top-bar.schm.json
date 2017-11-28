@@ -1,0 +1,60 @@
+{
+    "$schema": "http://json-schema.org/draft-03/schema#",
+    "type": "object",
+    "properties": {
+        "title": {
+            "type": "string",
+            "title": "Título de la barra",
+            "description": "título de la barra principal del sitio",
+            "required": true
+        },
+        "labelLogin": {
+            "type": "string",
+            "title": "Login",
+            "description": "Label para logearse",
+            "required": false
+        },
+        "languages": {
+            "type": "array",
+            "title": "Lenguajes disponibles",
+            "description": "Lenguajes disponibles en la página",
+            "required": false,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "label": {
+                        "type": "string",
+                        "title": "label",
+                        "enum": ["english", "spanish"]
+                    },
+                    "link": {
+                        "type": "string",
+                        "title": "Link"
+                    }
+                }
+            }
+        },
+        "modal": {
+            "type": "object",
+            "title": "modal",
+            "properties": {
+                "title": {
+                    "type": "string",
+                    "title": "Título de modal"
+                },
+                "loginBtn": {
+                    "type": "string",
+                    "title": "Label del Botón login"
+                },
+                "loginLink": {
+                    "type": "string",
+                    "title": "Link login"
+                },
+                "closeBtn": {
+                    "type": "string",
+                    "title": "Label botón cerrar"
+                }
+            }
+        }
+    }
+}

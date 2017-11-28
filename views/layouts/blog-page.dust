@@ -1,0 +1,205 @@
+<section class="latest-news-area blog-page sec-padding single-blog-post">
+    <div class="auto-container">
+        <div class="row">
+			<div class="col-md-9 col-sm-12 col-xs-12">
+				<!--Start single  item-->
+				<div class="latest-news">
+					<img src="img/resources/blog-2-1.jpg" alt="Images">
+					<div class="latest-news-text clearfix">
+						<div class="date">
+						   <h6>28<br>May</h6>
+						</div>
+						<a href="#"><h4>Expect Nothing Less Than Perfect</h4></a>
+						<p>By Rick Grims in Digital Analysis </p>
+					</div>
+					<div class="latest-text clearfix">
+						<br />
+						<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magniol res eos qui rate voluptatem sequi nesciunt  Neque porro quisquam est qui dolorem ipsum quia dolore sit amet con sectetur adipisci vel sed quia suthagara lukuthea satham</p><br />
+						<p>Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions.  incidunt ut lab dolore magnam aliquam quaerat voluptatem.</p><br />
+						<blockquote cite="#">“ Completely synergize resource taxing relationships via premier niche markets. Pro- fesstionally cultivate one-to-one customer service with robust ideas”</blockquote>
+						<p>Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to- one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service. Neque porro quisquam est qui dolorem ipsum quia dolore sit amet con sectetur adipi sci vel sed quia suthagara lukuthea satham Collaboratively.</p><br />
+
+						<div class="bottom-box clearfix">
+
+							<p class="pull-left">Tages :  <a href="#">SEO, </a><a href="#">Contant, </a><a href="#">Keyword, </a><a href="#">PPC</a></p>
+							
+							<div class="share-box pull-right">
+								<ul class="list-inline slideOutLeft animated">
+									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+									<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+								</ul><!-- /.list-inline -->
+								<a href="#"  class="share-collapse"><i class="flaticon-share"></i> share</a>
+							</div><!-- /.share-box -->
+						</div>
+
+					</div>
+				</div>
+				<!--End single  item-->
+				<div class="comment-block">
+					<div class="title">
+						<h3>Comments (3)</h3>
+					</div><!-- /.title -->
+					<div class="single-comment-box">
+						<div class="img-box">
+							<img src="img/resources/comment-1.png" alt="Awesome Image"/>
+						</div><!-- /.img-box -->
+						<div class="text-box">
+							<div class="inner-box">
+								<div class="top-box clearfix">
+									<h3 class="pull-left">Billu Manson</h3>
+									<p class="pull-right">June 25, 2016 <a href="#">reply <i class="fa fa-long-arrow-down"></i></a></p>
+								</div><!-- /.top-box -->
+								<p>Accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo marvl inven tore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>
+							</div><!-- /.inner-box -->
+						</div><!-- /.text-box -->
+					</div><!-- /.single-comment-box -->
+					<div class="single-comment-box reply-first-level">
+						<div class="img-box">
+							<img src="img/resources/comment-2.png" alt="Awesome Image"/>
+						</div><!-- /.img-box -->
+						<div class="text-box">
+							<div class="inner-box">
+								<div class="top-box clearfix">
+									<h3 class="pull-left">Billu Manson</h3>
+									<p class="pull-right">June 25, 2016 <a href="#">reply <i class="fa fa-long-arrow-down"></i></a></p>
+								</div><!-- /.top-box -->
+								<p>Accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo marvl inven tore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>
+							</div><!-- /.inner-box -->
+						</div><!-- /.text-box -->
+					</div><!-- /.single-comment-box -->
+					<div class="single-comment-box">
+						<div class="img-box">
+							<img src="img/resources/comment-3.png" alt="Awesome Image"/>
+						</div><!-- /.img-box -->
+						<div class="text-box">
+							<div class="inner-box">
+								<div class="top-box clearfix">
+									<h3 class="pull-left">Billu Manson</h3>
+									<p class="pull-right">June 25, 2016 <a href="#">reply <i class="fa fa-long-arrow-down"></i></a></p>
+								</div><!-- /.top-box -->
+								<p>Accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo marvl inven tore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>
+							</div><!-- /.inner-box -->
+						</div><!-- /.text-box -->
+					</div><!-- /.single-comment-box -->
+
+
+				</div><!-- /.comment-block -->
+
+				<div class="leave-a-comment">
+					<div class="title">
+						<h3>Leave a Comment</h3>
+					</div><!-- /.title -->
+					<form action="#" class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label>Name <span class="required">*</span></label>
+								<input type="text" />
+							</div><!-- /.form-group -->
+							<div class="form-group">
+								<label>E-mail <span class="required">*</span></label>
+								<input type="text" />
+							</div><!-- /.form-group -->
+							<div class="form-group">
+								<label>Phone Number <span class="required">*</span></label>
+								<input type="text" />
+							</div><!-- /.form-group -->
+						</div><!-- /.col-md-6 -->
+						<div class="col-md-6">
+							<div class="form-group">
+								<label>Comments <span class="required">*</span></label>
+								<textarea></textarea>
+							</div><!-- /.form-group -->
+							<div class="form-group">
+								<button type="submit">post comment</button>
+							</div><!-- /.form-group -->
+						</div><!-- /.col-md-6 -->
+					</form>
+				</div><!-- /.leave-a-comment -->
+
+			</div>
+			<div class="col-md-3 col-sm-12 col-xs-12">
+				<div class="single-sidebar">
+					<div class="search-box">
+						<form action="#" class="clearfix">
+							<input type="text" placeholder="Search Here">
+							<button type="submit"><i class="fa fa-search"></i></button>
+						</form>
+					</div><!-- /.search-box -->
+				</div><!-- /.single-sidebar -->
+				<div class="single-sidebar">
+					<div class="categories">
+						<div class="title">
+							<h3>Post Categories</h3>
+						</div><!-- /.title -->
+						<ul>
+							<li><a href="#">Business (5)</a></li>
+							<li><a href="#">Wordpress (8)</a></li>
+							<li><a href="#">Theme Forest (2)</a></li>
+							<li><a href="#">Web Developement (10)</a></li>
+							<li><a href="#">Statistics (2)</a></li>
+						</ul>
+					</div><!-- /.categories -->
+				</div><!-- /.single-sidebar -->
+				<div class="single-sidebar">
+					<div class="blog-post">
+						<div class="title">
+							<h3>Fresh From Blog</h3>
+						</div><!-- /.title -->
+						<ul>
+							<li>
+								<div class="img-box">
+									<img src="img/resources/blog-s1.jpg" alt="Awesome Image"/>
+								</div><!-- /.img-box -->
+								<div class="text-box">
+									<a href="#">
+										<h4>Generating Traffic Through Search</h4>
+									</a>
+									<a href="#"><p>25th June 2016</p></a>
+								</div><!-- /.text-box -->
+							</li>
+							<li>
+								<div class="img-box">
+									<img src="img/resources/blog-s2.jpg" alt="Awesome Image"/>
+								</div><!-- /.img-box -->
+								<div class="text-box">
+									<a href="#">
+										<h4>Additional Value to the Search Engine User</h4>
+									</a>
+									<a href="#"><p>25th June 2016</p></a>
+								</div><!-- /.text-box -->
+							</li>
+							<li>
+								<div class="img-box">
+									<img src="img/resources/blog-s3.jpg" alt="Awesome Image"/>
+								</div><!-- /.img-box -->
+								<div class="text-box">
+									<a href="#">
+										<h4>Potential Customers and Return Visitors</h4>
+									</a>
+									<a href="#"><p>25th June 2016</p></a>
+								</div><!-- /.text-box -->
+							</li>
+						</ul>
+					</div><!-- /.blog-post -->
+				</div><!-- /.single-sidebar -->
+				<div class="single-sidebar">
+					<div class="tags">
+						<div class="title">
+							<h3>Top Tags</h3>
+						</div><!-- /.title -->
+						<ul class="list-inline">
+							<li><a href="#">Install</a></li>
+							<li><a href="#">Design</a></li>
+							<li><a href="#">Video</a></li>
+							<li><a href="#">Branding</a></li>
+							<li><a href="#">Pakaging</a></li>
+						</ul>
+					</div><!-- /.tags -->
+				</div><!-- /.single-sidebar -->
+			</div><!-- /.col-md-3 -->
+        </div>
+    </div>
+</section>
+

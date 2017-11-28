@@ -1,0 +1,8 @@
+{
+    "proxy": "localhost:8000",
+    "directory": "dist",
+    "files": ["dist/**/*.js", "views/**/*.*"],
+    "reloadDelay": 3000,
+    "port": 3333,
+    "nota": "Si falla por la cantidad de elementos a observar: echo fs.inotify.max_user_watches=582222 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p"
+}

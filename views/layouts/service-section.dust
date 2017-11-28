@@ -1,0 +1,40 @@
+<section class="service-section sec-padding">
+	<div class="auto-container">
+		<div class="sec-title text-center">
+			<h3>Our SEO Core Services </h3>
+			<p>Grow your business and save time with seamless experience</p>
+		</div>		
+		<div class="row">
+			<div class="col-md-4 col-sm-6">
+				<div class="single-service text-center">
+					<div class="img-box">
+						<img src="img/service/3-1.jpg" alt="Awesome Image"/>
+					</div>
+					<h3>Pay Per Click</h3>
+					<p>Duis eget purus non est pellentesque egestas Maecenas venenatis ante urna tincidunt viverra quam mattisat pellentesque tempor </p>
+					<a href="#">Read More</a>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6">
+				<div class="single-service text-center">
+					<div class="img-box">
+						<img src="img/service/3-2.jpg" alt="Awesome Image"/>
+					</div>
+					<h3>Pay Per Click</h3>
+					<p>Duis eget purus non est pellentesque egestas Maecenas venenatis ante urna tincidunt viverra quam mattisat pellentesque tempor </p>
+					<a href="#">Read More</a>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6 col-lg-offset-0 col-md-offset-0 col-sm-offset-3 col-xs-offset-0">
+				<div class="single-service text-center">
+					<div class="img-box">
+						<img src="img/service/3-3.jpg" alt="Awesome Image"/>
+					</div>
+					<h3>Pay Per Click</h3>
+					<p>Duis eget purus non est pellentesque egestas Maecenas venenatis ante urna tincidunt viverra quam mattisat pellentesque tempor </p>
+					<a href="#">Read More</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

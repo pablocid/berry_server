@@ -1,0 +1,55 @@
+<section class="why-choose-us sec-padding">
+	<div class="auto-container">
+		<div class="sec-title text-center">
+			<h3>Why Choose Digital Media</h3>
+			<p>Grow your business and save time with seamless experience</p>
+		</div>
+		<div class="row">
+			<div class="col-md-3 col-sm-12 text-right">
+				<div class="text-box">
+					<h3>Helping you to increase<br> your site traffic</h3>
+					<p>Nullam lacinia dolor eu magna aliquet business<br>placerat. Aliquam semper in the area of SEO</p>
+				</div>
+				<div class="text-box bottom">
+					<h3>Helping you to increase<br> your site traffic</h3>
+					<p>Nullam lacinia dolor eu magna aliquet business<br>placerat. Aliquam semper in the area of SEO</p>
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-12 ">
+				<div class="choose-box">
+					<div class="inner-box">
+						<div class="content">
+							<h3>Helping you to increase <br> your site traffic</h3>
+						</div>
+						<div class="icon-box top left">
+							<i class="icon-drag-drop"></i>
+						</div>
+						<div class="icon-box top right">
+							<span class="icon-chart">
+			                	<span class="path1"></span><span class="path2"></span><span class="path3"></span>
+			                </span>
+						</div>
+						<div class="icon-box bottom left">
+							<span class="icon-rocket">			                	
+			                	<span class="path7"></span>
+			                </span>
+						</div>
+						<div class="icon-box bottom right">
+							<i class="icon-analyze"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-12">
+				<div class="text-box">
+					<h3>Helping you to increase<br> your site traffic</h3>
+					<p>Nullam lacinia dolor eu magna aliquet business<br>placerat. Aliquam semper in the area of SEO</p>
+				</div>
+				<div class="text-box bottom">
+					<h3>Helping you to increase<br> your site traffic</h3>
+					<p>Nullam lacinia dolor eu magna aliquet business<br>placerat. Aliquam semper in the area of SEO</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

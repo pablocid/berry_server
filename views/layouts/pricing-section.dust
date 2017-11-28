@@ -1,0 +1,70 @@
+<section class="pricing-section sec-padding gray-bg">
+	<div class="auto-container">
+		<div class="sec-title text-center">
+			<h3>Premium Optimization Plans</h3>
+			<p>Grow your business and save time with seamless experience</p>
+		</div>
+		<div class="row">
+			<div class="col-md-4 col-sm-6 col-xs-12">
+				<div class="single-price-plan-wrapper">
+					<div class="single-price-plan">
+						<div class="top-box">
+							<div class="inner-box">
+								<h3>Basic Plan</h3>
+								<p><span class="price">$</span><span>25</span>/ month</p>
+							</div><!-- /.inner-box -->
+						</div>
+						<ul>
+							<li>25 Analytics Campaigns</li>
+							<li>1,900 Keywords</li>
+							<li>1,250,000 Crawled Pages</li>
+							<li>Includes Branded Reports</li>
+							<li>50 Social Accounts</li>
+						</ul>
+						<a href="#" class="btn btn-default">Buy Now</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6 col-xs-12">
+				<div class="single-price-plan-wrapper">
+					<div class="single-price-plan">
+						<div class="top-box">
+							<div class="inner-box">
+								<h3>Basic Plan</h3>
+								<p><span class="price">$</span><span>25</span>/ month</p>
+							</div><!-- /.inner-box -->
+						</div>
+						<ul>
+							<li>25 Analytics Campaigns</li>
+							<li>1,900 Keywords</li>
+							<li>1,250,000 Crawled Pages</li>
+							<li>Includes Branded Reports</li>
+							<li>50 Social Accounts</li>
+						</ul>
+						<a href="#" class="btn btn-default">Buy Now</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6 col-xs-12">
+				<div class="single-price-plan-wrapper">
+					<div class="single-price-plan">
+						<div class="top-box">
+							<div class="inner-box">
+								<h3>Basic Plan</h3>
+								<p><span class="price">$</span><span>25</span>/ month</p>
+							</div><!-- /.inner-box -->
+						</div>
+						<ul>
+							<li>25 Analytics Campaigns</li>
+							<li>1,900 Keywords</li>
+							<li>1,250,000 Crawled Pages</li>
+							<li>Includes Branded Reports</li>
+							<li>50 Social Accounts</li>
+						</ul>
+						<a href="#" class="btn btn-default">Buy Now</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,13 @@
+<section class="service-features">
+	<div class="auto-container">
+		<div class="row">
+			<div class="col-md-5 col-sm-5 col-xs-12">
+				<h3>Content Marketing Strategy</h3>
+				<p>We use enterprise strategies to boost your local and worldwide search rankings so your customers can find you when & where they need </p>
+			</div><!-- /.col-md-5 -->
+			<div class="col-md-7 col-sm-7 col-xs-12">
+				<img src="img/resources/mockup-3.jpg" alt="Awesome Image"/>
+			</div><!-- /.col-md-7 -->
+		</div><!-- /.row -->
+	</div><!-- /.auto-container -->
+</section><!-- /.service-fetures -->

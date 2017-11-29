@@ -168,26 +168,26 @@ def analyzer(url):
 
 
 	# load the image, convert it to grayscale, and blur it slightly
-	image = warped[5:490, 5:770].copy() #cv2.imread(args["image"])
+	image = warped[5:480, 5:750].copy() #cv2.imread(args["image"])
 	orig = image.copy()
 	
-	clahe = cv2.createCLAHE(clipLimit=5., tileGridSize=(10,10))
+	clahe = cv2.createCLAHE(clipLimit=4., tileGridSize=(15,15))
 	lab = cv2.cvtColor(image, cv2.COLOR_BGR2LAB) 
 	l, a, b = cv2.split(lab)
 	l2 = clahe.apply(l)
 	lab = cv2.merge((l2,a,b))  # merge channels
 	image = cv2.cvtColor(lab, cv2.COLOR_LAB2BGR)
 
-	
-
 	gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 	gray = cv2.GaussianBlur(gray, (7, 7), 0)
 
-	
+	# tempName = "test.jpg"
+	# cv2.imwrite(tempName, gray);
+	# return 
 	
 	# perform edge detection, then perform a dilation + erosion to
 	# close gaps in between object edges
-	edged = cv2.Canny(gray, 50, 100)
+	edged = cv2.Canny(gray, 30, 150)
 	edged = cv2.dilate(edged, None, iterations=2)
 	edged = cv2.erode(edged, None, iterations=2)
 
@@ -214,7 +214,7 @@ def analyzer(url):
 
 	for c in cnts:
 		# if the contour is not sufficiently large, ignore it
-		if cv2.contourArea(c) < 20:
+		if cv2.contourArea(c) < 25:
 			continue
 	
 		# compute the rotated bounding box of the contour
@@ -289,14 +289,14 @@ def analyzer(url):
 
 	
 	
-	# tempName = "test.jpg"
-	# cv2.imwrite(tempName, orig);
-	# return 
-	namePic = "/tmp/"+str(uuid.uuid1())+".jpg"
-	cv2.imwrite(namePic, orig);
-	print namePic
-	print mCoord[:]
-	return mCoord
+	tempName = "test.jpg"
+	cv2.imwrite(tempName, orig);
+	return 
+	# namePic = "/tmp/"+str(uuid.uuid1())+".jpg"
+	# cv2.imwrite(namePic, orig);
+	# print namePic
+	# print mCoord[:]
+	# return mCoord
 
 analyzer(str(sys.argv[1]))
 

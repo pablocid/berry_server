@@ -131,6 +131,10 @@ export class BerryAnalyzerRoute extends BaseRoute {
             }
 
             const path = stdout.split('\n')[0]
+            if(path === '001'){
+                res.status(500).json({message:"no se pudo ajustar la perspectiva de la imagen"})
+                return;
+            }
             const data = stdout.split('\n')[1]
             const datos = (<Array<number[]>>JSON.parse(data)).map(x => {
                 return {

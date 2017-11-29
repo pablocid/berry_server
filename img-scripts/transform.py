@@ -91,7 +91,7 @@ def analyzer(url):
 	if 'screenCnt' in locals():
     		hola = "hola"
 	else:
-    		print "the variable screenCnt is not set"
+    		print "001"
 		return
 
 	warped = four_point_transform(orig, screenCnt.reshape(4, 2) * ratio)
@@ -107,15 +107,15 @@ def analyzer(url):
 	# cv2.imshow("Scanned", imutils.resize(warped, height = 650))
 	# cv2.waitKey(0)
 
-	height, width = warped.shape[:2]
+	#height, width = warped.shape[:2]
 
 
-	orig = warped[30:2000, 30:2700]
+	#orig = warped[10:590, 10:590]
 
 
 
 	# load the image, convert it to grayscale, and blur it slightly
-	image = warped[30:2000, 30:2700].copy() #cv2.imread(args["image"])
+	image = warped[5:490, 5:770].copy() #cv2.imread(args["image"])
 	gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 	gray = cv2.GaussianBlur(gray, (7, 7), 0)
 	
@@ -142,7 +142,7 @@ def analyzer(url):
 
 	for c in cnts:
 		# if the contour is not sufficiently large, ignore it
-		if cv2.contourArea(c) < 100:
+		if cv2.contourArea(c) < 20:
 			continue
 	
 		# compute the rotated bounding box of the contour
@@ -208,13 +208,18 @@ def analyzer(url):
 		mean = (dimA + dimB)/2
 		mCoord.append([dimA, dimB, mean, area,rectangleVsArea, circleVsArea, ellipseVsArea])
 		# draw the object sizes on the image
-		cv2.putText(orig, "{:.2f}cm".format(dimA),
-			(int(tltrX - 15), int(tltrY - 10)), cv2.FONT_HERSHEY_SIMPLEX,
-			1.3, (0, 0, 255), 2)
-		cv2.putText(orig, "{:.2f}cm".format(dimB),
-			(int(trbrX + 10), int(trbrY)), cv2.FONT_HERSHEY_SIMPLEX,
-			1.3, (0, 0, 255), 2)
+		cv2.putText(orig, "{:.1f} cm".format(dimA),
+			(int(tltrX - 10), int(tltrY - 5)), cv2.FONT_HERSHEY_SIMPLEX,
+			0.5, (0, 0, 255), 1)
+		cv2.putText(orig, "{:.1f} cm".format(dimB),
+			(int(trbrX + 5), int(trbrY)), cv2.FONT_HERSHEY_SIMPLEX,
+			0.5, (0, 0, 255), 1)
 
+	
+	
+	# tempName = "test.jpg"
+	# cv2.imwrite(tempName, orig);
+	# return 
 	namePic = "/tmp/"+str(uuid.uuid1())+".jpg"
 	cv2.imwrite(namePic, orig);
 	print namePic

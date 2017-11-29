@@ -38,6 +38,56 @@ def url_to_image(url):
 	# return the image
 	return image
 
+def apply_mask(matrix, mask, fill_value):
+    masked = np.ma.array(matrix, mask=mask, fill_value=fill_value)
+    return masked.filled()
+
+def apply_threshold(matrix, low_value, high_value):
+    low_mask = matrix < low_value
+    matrix = apply_mask(matrix, low_mask, low_value)
+
+    high_mask = matrix > high_value
+    matrix = apply_mask(matrix, high_mask, high_value)
+
+    return matrix
+
+def simplest_cb(img, percent):
+    assert img.shape[2] == 3
+    assert percent > 0 and percent < 100
+
+    half_percent = percent / 200.0
+
+    channels = cv2.split(img)
+
+    out_channels = []
+    for channel in channels:
+        assert len(channel.shape) == 2
+        # find the low and high precentile values (based on the input percentile)
+        height, width = channel.shape
+        vec_size = width * height
+        flat = channel.reshape(vec_size)
+
+        assert len(flat.shape) == 1
+
+        flat = np.sort(flat)
+
+        n_cols = flat.shape[0]
+
+        low_val  = int(flat[math.floor(n_cols * half_percent)])
+        high_val = flat[math.ceil( n_cols * (1.0 - half_percent))]
+
+        #print "Lowval: ", low_val
+        #print "Highval: ", high_val
+
+        # saturate below the low percentile and above the high percentile
+        thresholded = apply_threshold(channel, low_val, high_val)
+        # scale the channel
+        normalized = cv2.normalize(thresholded, thresholded.copy(), 0, 255, cv2.NORM_MINMAX)
+        out_channels.append(normalized)
+
+    return cv2.merge(out_channels)
+
+
 def midpoint(ptA, ptB):
     return ((ptA[0] + ptB[0]) * 0.5, (ptA[1] + ptB[1]) * 0.5)
  
@@ -48,7 +98,10 @@ def midpoint(ptA, ptB):
 #image = url_to_image("bayas.jpg")
 
 def analyzer(url):
-	image = io.imread(url)
+	image = cv2.imread(url)
+	
+
+	#image = simplest_cb(image, 1)
 	ratio = image.shape[0] / 600.0
 	orig = image.copy()
 	image = imutils.resize(image, height = 600)
@@ -116,6 +169,15 @@ def analyzer(url):
 
 	# load the image, convert it to grayscale, and blur it slightly
 	image = warped[5:490, 5:770].copy() #cv2.imread(args["image"])
+	orig = image.copy()
+	
+	clahe = cv2.createCLAHE(clipLimit=8., tileGridSize=(10,25))
+	lab = cv2.cvtColor(image, cv2.COLOR_BGR2LAB) 
+	l, a, b = cv2.split(lab)
+	l2 = clahe.apply(l)
+	lab = cv2.merge((l2,a,b))  # merge channels
+	image = cv2.cvtColor(lab, cv2.COLOR_LAB2BGR)
+	
 	gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 	gray = cv2.GaussianBlur(gray, (7, 7), 0)
 	
@@ -136,7 +198,9 @@ def analyzer(url):
 	(cnts, _) = contours.sort_contours(cnts)
 	pixelsPerMetric = None
 
-	orig = image.copy()
+	
+
+
 	# loop over the contours individually
 	mCoord = []
 
@@ -217,14 +281,14 @@ def analyzer(url):
 
 	
 	
-	# tempName = "test.jpg"
-	# cv2.imwrite(tempName, orig);
-	# return 
-	namePic = "/tmp/"+str(uuid.uuid1())+".jpg"
-	cv2.imwrite(namePic, orig);
-	print namePic
-	print mCoord[:]
-	return mCoord
+	tempName = "test.jpg"
+	cv2.imwrite(tempName, orig);
+	return 
+	# namePic = "/tmp/"+str(uuid.uuid1())+".jpg"
+	# cv2.imwrite(namePic, orig);
+	# print namePic
+	# print mCoord[:]
+	# return mCoord
 
 analyzer(str(sys.argv[1]))
 

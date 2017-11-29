@@ -147,7 +147,7 @@ export class BerryAnalyzerRoute extends BaseRoute {
             res.json({ url: this._base64_encode(path), data: datos })
 
             this._removeTmpImg(path);
-            unlink(req.file.path, (err) => { })
+            this._removeTmpImg(req.file.path);
         })
         // res.json({
         //     path: req.file.path,

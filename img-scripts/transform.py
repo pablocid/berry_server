@@ -215,7 +215,7 @@ def analyzer(url):
 			(int(trbrX + 10), int(trbrY)), cv2.FONT_HERSHEY_SIMPLEX,
 			1.3, (0, 0, 255), 2)
 
-	namePic = "tmp/"+str(uuid.uuid1())+".jpg"
+	namePic = "/tmp/"+str(uuid.uuid1())+".jpg"
 	cv2.imwrite(namePic, orig);
 	print namePic
 	print mCoord[:]

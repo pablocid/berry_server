@@ -275,7 +275,7 @@ def analyzer(url):
 		(x,y),radius = cv2.minEnclosingCircle(c)
 		circleVsArea = cv2.contourArea(c) / (math.pi * radius * radius)
 		rectangleVsArea = cv2.contourArea(c) / (dA*dB)
-		ellipseVsArea = cv2.contourArea(c) / (math.pi * dA * dB)
+		ellipseVsArea = cv2.contourArea(c) / (math.pi * dA * dB /4)
 
 		mean = (dimA + dimB)/2
 		mCoord.append([dimA, dimB, mean, area,rectangleVsArea, circleVsArea, ellipseVsArea])

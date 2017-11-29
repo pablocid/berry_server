@@ -177,7 +177,7 @@ def analyzer(url):
 	l2 = clahe.apply(l)
 	lab = cv2.merge((l2,a,b))  # merge channels
 	image = cv2.cvtColor(lab, cv2.COLOR_LAB2BGR)
-	
+
 	gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 	gray = cv2.GaussianBlur(gray, (7, 7), 0)
 	
@@ -281,14 +281,14 @@ def analyzer(url):
 
 	
 	
-	tempName = "test.jpg"
-	cv2.imwrite(tempName, orig);
-	return 
-	# namePic = "/tmp/"+str(uuid.uuid1())+".jpg"
-	# cv2.imwrite(namePic, orig);
-	# print namePic
-	# print mCoord[:]
-	# return mCoord
+	# tempName = "test.jpg"
+	# cv2.imwrite(tempName, orig);
+	# return 
+	namePic = "/tmp/"+str(uuid.uuid1())+".jpg"
+	cv2.imwrite(namePic, orig);
+	print namePic
+	print mCoord[:]
+	return mCoord
 
 analyzer(str(sys.argv[1]))
 

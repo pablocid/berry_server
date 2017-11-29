@@ -168,7 +168,7 @@ def analyzer(url):
 
 
 	# load the image, convert it to grayscale, and blur it slightly
-	image = warped[5:480, 5:750].copy() #cv2.imread(args["image"])
+	image = warped[5:480, 5:650].copy() #cv2.imread(args["image"])
 	orig = image.copy()
 	
 	clahe = cv2.createCLAHE(clipLimit=4., tileGridSize=(15,15))
@@ -289,14 +289,14 @@ def analyzer(url):
 
 	
 	
-	# tempName = "test.jpg"
-	# cv2.imwrite(tempName, orig);
-	# return 
-	namePic = "/tmp/"+str(uuid.uuid1())+".jpg"
-	cv2.imwrite(namePic, orig);
-	print namePic
-	print mCoord[:]
-	return mCoord
+	tempName = "test.jpg"
+	cv2.imwrite(tempName, orig);
+	return 
+	# namePic = "/tmp/"+str(uuid.uuid1())+".jpg"
+	# cv2.imwrite(namePic, orig);
+	# print namePic
+	# print mCoord[:]
+	# return mCoord
 
 analyzer(str(sys.argv[1]))
 

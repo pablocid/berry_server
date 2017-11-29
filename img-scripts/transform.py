@@ -171,21 +171,29 @@ def analyzer(url):
 	image = warped[5:490, 5:770].copy() #cv2.imread(args["image"])
 	orig = image.copy()
 	
-	clahe = cv2.createCLAHE(clipLimit=8., tileGridSize=(10,25))
+	clahe = cv2.createCLAHE(clipLimit=5., tileGridSize=(10,10))
 	lab = cv2.cvtColor(image, cv2.COLOR_BGR2LAB) 
 	l, a, b = cv2.split(lab)
 	l2 = clahe.apply(l)
 	lab = cv2.merge((l2,a,b))  # merge channels
 	image = cv2.cvtColor(lab, cv2.COLOR_LAB2BGR)
 
+	
+
 	gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 	gray = cv2.GaussianBlur(gray, (7, 7), 0)
+
+	
 	
 	# perform edge detection, then perform a dilation + erosion to
 	# close gaps in between object edges
 	edged = cv2.Canny(gray, 50, 100)
 	edged = cv2.dilate(edged, None, iterations=2)
 	edged = cv2.erode(edged, None, iterations=2)
+
+	# tempName = "test.jpg"
+	# cv2.imwrite(tempName, edged);
+	# return 
 
 
 	# find contours in the edge map
@@ -281,14 +289,14 @@ def analyzer(url):
 
 	
 	
-	# tempName = "test.jpg"
-	# cv2.imwrite(tempName, orig);
-	# return 
-	namePic = "/tmp/"+str(uuid.uuid1())+".jpg"
-	cv2.imwrite(namePic, orig);
-	print namePic
-	print mCoord[:]
-	return mCoord
+	tempName = "test.jpg"
+	cv2.imwrite(tempName, orig);
+	return 
+	# namePic = "/tmp/"+str(uuid.uuid1())+".jpg"
+	# cv2.imwrite(namePic, orig);
+	# print namePic
+	# print mCoord[:]
+	# return mCoord
 
 analyzer(str(sys.argv[1]))
 

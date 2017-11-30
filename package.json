@@ -6,7 +6,7 @@
     "scripts": {
         "dev": "concurrently --kill-others \"tsc -w\" \"nodemon ./bin/www --config conf.nodemon.json\" \"npm run browsersync\"  ",
         "browsersync": "browser-sync start -c conf.browsersync.json ",
-        "start": "PORT=80 NODE_ENV=\"production\" node ./bin/www",
+        "start": "sudo PORT=80 NODE_ENV=\"production\" node ./bin/www",
         "test": "mocha dist/**/*.spec.js",
         "typedoc": "typedoc --module commonjs --target ES6 --out documentation src"
     },

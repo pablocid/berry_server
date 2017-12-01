@@ -280,10 +280,10 @@ def analyzer(url):
 		mean = (dimA + dimB)/2
 		mCoord.append([dimA, dimB, mean, area,rectangleVsArea, circleVsArea, ellipseVsArea])
 		# draw the object sizes on the image
-		cv2.putText(orig, "{:.1f} cm".format(dimA),
+		cv2.putText(orig, "{:.1f} cm".format(dimB),
 			(int(tltrX - 10), int(tltrY - 5)), cv2.FONT_HERSHEY_SIMPLEX,
 			0.5, (0, 0, 255), 1)
-		cv2.putText(orig, "{:.1f} cm".format(dimB),
+		cv2.putText(orig, "{:.1f} cm".format(dimA),
 			(int(trbrX + 5), int(trbrY)), cv2.FONT_HERSHEY_SIMPLEX,
 			0.5, (0, 0, 255), 1)
 

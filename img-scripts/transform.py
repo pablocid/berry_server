@@ -168,7 +168,7 @@ def analyzer(url):
 
 
 	# load the image, convert it to grayscale, and blur it slightly
-	image = warped[8:440, 8:630].copy() #cv2.imread(args["image"])
+	image = warped[8:440, 8:615].copy() #cv2.imread(args["image"])
 	orig = image.copy()
 	
 	clahe = cv2.createCLAHE(clipLimit=4., tileGridSize=(15,15))

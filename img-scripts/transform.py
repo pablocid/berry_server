@@ -52,8 +52,8 @@ def apply_threshold(matrix, low_value, high_value):
     return matrix
 
 def simplest_cb(img, percent):
-    assert img.shape[2] == 3
-    assert percent > 0 and percent < 100
+    #assert img.shape[2] == 3
+    #assert percent > 0 and percent < 100
 
     half_percent = percent / 200.0
 
@@ -61,20 +61,20 @@ def simplest_cb(img, percent):
 
     out_channels = []
     for channel in channels:
-        assert len(channel.shape) == 2
+        #assert len(channel.shape) == 2
         # find the low and high precentile values (based on the input percentile)
         height, width = channel.shape
         vec_size = width * height
         flat = channel.reshape(vec_size)
 
-        assert len(flat.shape) == 1
+        #assert len(flat.shape) == 1
 
         flat = np.sort(flat)
 
         n_cols = flat.shape[0]
 
-        low_val  = int(flat[math.floor(n_cols * half_percent)])
-        high_val = flat[math.ceil( n_cols * (1.0 - half_percent))]
+        low_val  = flat[int(math.floor(n_cols * half_percent))]
+        high_val = flat[int(math.ceil( n_cols * (1.0 - half_percent)))]
 
         #print "Lowval: ", low_val
         #print "Highval: ", high_val
@@ -96,6 +96,29 @@ def midpoint(ptA, ptB):
 
 #image = cv2.imread("bayas.jpg")
 #image = url_to_image("bayas.jpg")
+
+def autocrop(image, threshold=0):
+    """Crops any edges below or equal to threshold
+
+    Crops blank image to 1x1.
+
+    Returns cropped image.
+
+    """
+    if len(image.shape) == 3:
+        flatImage = np.max(image, 2)
+    else:
+        flatImage = image
+    assert len(flatImage.shape) == 2
+
+    rows = np.where(np.max(flatImage, 0) > threshold)[0]
+    if rows.size:
+        cols = np.where(np.max(flatImage, 1) > threshold)[0]
+        image = image[cols[0]: cols[-1] + 1, rows[0]: rows[-1] + 1]
+    else:
+        image = image[:1, :1]
+
+    return image
 
 def analyzer(url):
 	image = cv2.imread(url)
@@ -168,21 +191,25 @@ def analyzer(url):
 
 
 	# load the image, convert it to grayscale, and blur it slightly
-	image = warped[8:440, 10:590].copy() #cv2.imread(args["image"])
+	image = warped[8:480, 10:620].copy() #cv2.imread(args["image"])
+	image = autocrop(image, 10)
+	image = simplest_cb(image, 0.1)
 	orig = image.copy()
+
 	
-	clahe = cv2.createCLAHE(clipLimit=4., tileGridSize=(15,15))
-	lab = cv2.cvtColor(image, cv2.COLOR_BGR2LAB) 
-	l, a, b = cv2.split(lab)
-	l2 = clahe.apply(l)
-	lab = cv2.merge((l2,a,b))  # merge channels
-	image = cv2.cvtColor(lab, cv2.COLOR_LAB2BGR)
+	
+	# clahe = cv2.createCLAHE(clipLimit=0.5, tileGridSize=(1,1))
+	# lab = cv2.cvtColor(image, cv2.COLOR_BGR2LAB) 
+	# l, a, b = cv2.split(lab)
+	# l2 = clahe.apply(l)
+	# lab = cv2.merge((l2,a,b))  # merge channels
+	# image = cv2.cvtColor(lab, cv2.COLOR_LAB2BGR)
 
 	gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 	gray = cv2.GaussianBlur(gray, (7, 7), 0)
 
 	# tempName = "test.jpg"
-	# cv2.imwrite(tempName, gray);
+	# cv2.imwrite(tempName, image);
 	# return 
 	
 	# perform edge detection, then perform a dilation + erosion to

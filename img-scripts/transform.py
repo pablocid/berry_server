@@ -316,9 +316,9 @@ def analyzer(url):
 
 	
 	
-	tempName = "test.jpg"
-	cv2.imwrite(tempName, orig);
-	return 
+	# tempName = "test.jpg"
+	# cv2.imwrite(tempName, orig);
+	# return 
 	namePic = "/tmp/"+str(uuid.uuid1())+".jpg"
 	cv2.imwrite(namePic, orig);
 	print namePic

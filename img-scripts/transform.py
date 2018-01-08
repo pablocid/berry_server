@@ -271,7 +271,7 @@ def analyzer(url):
 	for c in cnts:
 		# if the contour is not sufficiently large, ignore it
 		
-		print cv2.contourArea(c)
+		#print cv2.contourArea(c)
 		if cv2.contourArea(c) < 25:
 			continue
 

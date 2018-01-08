@@ -122,9 +122,9 @@ def autocrop(image, threshold=0):
 
 def analyzer(url):
 	image = cv2.imread(url)
-	
 
 	#image = simplest_cb(image, 1)
+	
 	ratio = image.shape[0] / 600.0
 	orig = image.copy()
 	image = imutils.resize(image, height = 600)
@@ -134,6 +134,10 @@ def analyzer(url):
 	gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 	gray = cv2.GaussianBlur(gray, (5, 5), 0)
 	edged = cv2.Canny(gray, 75, 200)
+
+	# tempName = "test.jpg"
+	# cv2.imwrite(tempName, edged)
+	# return 
 	
 	# show the original image and the edge detected image
 	# print "STEP 1: Edge Detection"
@@ -188,15 +192,38 @@ def analyzer(url):
 
 	#orig = warped[10:590, 10:590]
 
-
-
 	# load the image, convert it to grayscale, and blur it slightly
-	image = warped[8:480, 10:660].copy() #cv2.imread(args["image"])
-	image = autocrop(image, 10)
-	image = simplest_cb(image, 0.1)
+	image = warped#[5:480, 5:660].copy() #cv2.imread(args["image"])
+	#image = autocrop(warped, 100)
+	
+	image = simplest_cb(image, 1)
+
+	#############
+	# img = cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
+	
+ 	# circles = cv2.HoughCircles(img,cv2.HOUGH_GRADIENT,0.5,40,param1=80,param2=25,minRadius=10,maxRadius=100)
+	
+ 	# circles = np.uint16(np.around(circles))
+ 	# for i in circles[0,:]:
+ 	#     # draw the outer circle
+ 	#     cv2.circle(image,(i[0],i[1]),i[2],(0,255,0),2)
+ 	#     # draw the center of the circle
+ 	#     cv2.circle(image,(i[0],i[1]),2,(0,0,255),3)
+	
+ 	# tempName = "test.jpg"
+	# cv2.imwrite(tempName, image)
+	# return 
+
+	#############
+
+	# Add black border in case that page is touching an image border		
+	#image = cv2.copyMakeBorder(image, 10, 10, 10, 10, cv2.BORDER_CONSTANT, value=[255, 255, 255])		
 	orig = image.copy()
 
-	
+	# tempName = "test.jpg"
+	# cv2.imwrite(tempName, image)
+	# return 
+
 	
 	# clahe = cv2.createCLAHE(clipLimit=0.5, tileGridSize=(1,1))
 	# lab = cv2.cvtColor(image, cv2.COLOR_BGR2LAB) 
@@ -238,15 +265,22 @@ def analyzer(url):
 
 	# loop over the contours individually
 	mCoord = []
+	grapes = []
+	reference = 0
 
 	for c in cnts:
 		# if the contour is not sufficiently large, ignore it
 		if cv2.contourArea(c) < 25:
 			continue
-	
-		# compute the rotated bounding box of the contour
-		
+
+		approx = cv2.approxPolyDP(c,0.01*cv2.arcLength(c,True),True)
+		area = cv2.contourArea(c)
+
+		if ((len(approx) < 7) ):
+    				continue
+
 		box = cv2.minAreaRect(c)
+
 		box = cv2.cv.BoxPoints(box) if imutils.is_cv2() else cv2.boxPoints(box)
 		box = np.array(box, dtype="float")
 	
@@ -307,18 +341,18 @@ def analyzer(url):
 		mean = (dimA + dimB)/2
 		mCoord.append([dimA, dimB, mean, area,rectangleVsArea, circleVsArea, ellipseVsArea])
 		# draw the object sizes on the image
-		cv2.putText(orig, "{:.1f} cm".format(dimB),
+		cv2.putText(orig, "{:.1f}cm".format(dimB),
 			(int(tltrX - 10), int(tltrY - 5)), cv2.FONT_HERSHEY_SIMPLEX,
-			0.5, (0, 0, 255), 1)
-		cv2.putText(orig, "{:.1f} cm".format(dimA),
+			0.45, (0, 0, 255), 1)
+		cv2.putText(orig, "{:.1f}cm".format(dimA),
 			(int(trbrX + 5), int(trbrY)), cv2.FONT_HERSHEY_SIMPLEX,
-			0.5, (0, 0, 255), 1)
-
+			0.45, (0, 0, 255), 1)
 	
 	
 	# tempName = "test.jpg"
 	# cv2.imwrite(tempName, orig);
-	# return 
+	# return
+
 	namePic = "/tmp/"+str(uuid.uuid1())+".jpg"
 	cv2.imwrite(namePic, orig);
 	print namePic

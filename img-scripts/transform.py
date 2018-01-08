@@ -275,7 +275,7 @@ def analyzer(url):
 		if cv2.contourArea(c) < 25:
 			continue
 
-		if cv2.contourArea(c) > 2000:
+		if cv2.contourArea(c) > 1500:
     			continue
 
 		approx = cv2.approxPolyDP(c,0.01*cv2.arcLength(c,True),True)

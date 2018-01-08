@@ -270,13 +270,18 @@ def analyzer(url):
 
 	for c in cnts:
 		# if the contour is not sufficiently large, ignore it
+		
+		print cv2.contourArea(c)
 		if cv2.contourArea(c) < 25:
 			continue
+
+		if cv2.contourArea(c) > 2000:
+    			continue
 
 		approx = cv2.approxPolyDP(c,0.01*cv2.arcLength(c,True),True)
 		area = cv2.contourArea(c)
 
-		if ((len(approx) < 7) ):
+		if ((len(approx) < 4) ):
     				continue
 
 		box = cv2.minAreaRect(c)
@@ -349,9 +354,9 @@ def analyzer(url):
 			0.45, (0, 0, 255), 1)
 	
 	
-	# tempName = "test.jpg"
-	# cv2.imwrite(tempName, orig);
-	# return
+	tempName = "test.jpg"
+	cv2.imwrite(tempName, orig);
+	return
 
 	namePic = "/tmp/"+str(uuid.uuid1())+".jpg"
 	cv2.imwrite(namePic, orig);

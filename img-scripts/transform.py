@@ -271,17 +271,14 @@ def analyzer(url):
 	for c in cnts:
 		# if the contour is not sufficiently large, ignore it
 		
-		#print cv2.contourArea(c)
+		print cv2.contourArea(c)
 		if cv2.contourArea(c) < 25:
 			continue
-
-		if cv2.contourArea(c) > 1500:
-    			continue
 
 		approx = cv2.approxPolyDP(c,0.01*cv2.arcLength(c,True),True)
 		area = cv2.contourArea(c)
 
-		if ((len(approx) < 5) ):
+		if ((len(approx) < 7) ):
     				continue
 
 		box = cv2.minAreaRect(c)

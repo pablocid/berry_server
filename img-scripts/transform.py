@@ -51,8 +51,47 @@ def apply_threshold(matrix, low_value, high_value):
 
     return matrix
 
+def findRectangle(frame):
+
+	template=cv2.imread("reference.jpg")
+
+	result = cv2.matchTemplate(frame.copy(), template, cv2.TM_CCOEFF_NORMED)
+	min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(result)
+	_, w, h = template.shape[::-1]
+
+	top_left = max_loc
+	bottom_right = (top_left[0] + w, top_left[1] + h)
+
+
+	warped = frame[top_left[1]:bottom_right[1], top_left[0]:bottom_right[0]]
+
+	warped = cv2.cvtColor(warped, cv2.COLOR_BGR2GRAY)
+	warped = cv2.GaussianBlur(warped, (7, 7), 0)
+
+	edged = cv2.Canny(warped, 30, 150)
+	edged = cv2.dilate(edged, None, iterations=2)
+	edged = cv2.erode(edged, None, iterations=2)
+
+	_ ,cnts, _ = cv2.findContours(edged, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
+	cnts = sorted(cnts, key = cv2.contourArea, reverse = True)[:5]
+
+	area = 1
+	for c in cnts:
+		# approximate the contour
+		peri = cv2.arcLength(c, True)
+		approx = cv2.approxPolyDP(c, 0.02 * peri, True)
+
+		# if our approximated contour has four points, then we
+		# can assume that we have found our screen
+		if len(approx) == 4:
+			area = cv2.contourArea(c)
+			break
+	
+	return math.sqrt(area)
+
+
 def simplest_cb(img, percent):
-    #assert img.shape[2] == 3
+    #assert img.shape[2] == 3a
     #assert percent > 0 and percent < 100
 
     half_percent = percent / 200.0
@@ -122,13 +161,11 @@ def autocrop(image, threshold=0):
 
 def analyzer(url):
 	image = cv2.imread(url)
-
-	#image = simplest_cb(image, 1)
 	
 	ratio = image.shape[0] / 600.0
 	orig = image.copy()
 	image = imutils.resize(image, height = 600)
-	
+
 	# convert the image to grayscale, blur it, and find edges
 	# in the image
 	gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
@@ -176,6 +213,7 @@ def analyzer(url):
 
 	warped = four_point_transform(orig, screenCnt.reshape(4, 2) * ratio)
 	
+
 	# convert the warped image to grayscale, then threshold it
 	# to give it that 'black and white' paper effect
 	#warped = cv2.cvtColor(warped, cv2.COLOR_BGR2GRAY)
@@ -193,10 +231,14 @@ def analyzer(url):
 	#orig = warped[10:590, 10:590]
 
 	# load the image, convert it to grayscale, and blur it slightly
-	image = warped#[5:480, 5:660].copy() #cv2.imread(args["image"])
+	#image = warped#[5:480, 5:660].copy() #cv2.imread(args["image"])
 	#image = autocrop(warped, 100)
 	
-	image = simplest_cb(image, 1)
+	image = simplest_cb(warped, 1)
+
+	# cv2.imshow("Edged", image)
+	# cv2.waitKey(0)
+	# cv2.destroyAllWindows()
 
 	#############
 	# img = cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
@@ -245,6 +287,7 @@ def analyzer(url):
 	edged = cv2.dilate(edged, None, iterations=2)
 	edged = cv2.erode(edged, None, iterations=2)
 
+
 	# tempName = "test.jpg"
 	# cv2.imwrite(tempName, edged);
 	# return 
@@ -258,16 +301,13 @@ def analyzer(url):
 	# sort the contours from left-to-right and initialize the
 	# 'pixels per metric' calibration variable
 	(cnts, _) = contours.sort_contours(cnts)
-	pixelsPerMetric = None
-
+	pixelsPerMetric = findRectangle(image)
+	#pixelsPerMetric = None
 	
-
 
 	# loop over the contours individually
 	mCoord = []
-	grapes = []
-	reference = 0
-
+	
 	for c in cnts:
 		# if the contour is not sufficiently large, ignore it
 		
@@ -278,7 +318,7 @@ def analyzer(url):
 		approx = cv2.approxPolyDP(c,0.01*cv2.arcLength(c,True),True)
 		area = cv2.contourArea(c)
 
-		if ((len(approx) < 8) ):
+		if ((len(approx) < 9) ):
     				continue
 
 		box = cv2.minAreaRect(c)
@@ -328,13 +368,21 @@ def analyzer(url):
 		# if the pixels per metric has not been initialized, then
 		# compute it as the ratio of pixels to supplied metric
 		# (in this case, inches)
-		if pixelsPerMetric is None:
-			pixelsPerMetric = (dA + dB)/2
+		#if pixelsPerMetric is None:
+
+		 	#pixelsPerMetric = (dA + dB)/2
+		# 	print pixelsPerMetric
+			# print cv2.contourArea(c)
+			# print dA, dB
+			# print dA * dB
+			# print cv2.contourArea(c)/ (dA * dB )
+			#pixelsPerMetric = 1
+
 
 		# compute the size of the object
 		dimA = dA / pixelsPerMetric
 		dimB = dB / pixelsPerMetric
-		area = cv2.contourArea(c) /(pixelsPerMetric * pixelsPerMetric)
+		area = cv2.contourArea(c) /(pixelsPerMetric **2)
 		(x,y),radius = cv2.minEnclosingCircle(c)
 		circleVsArea = cv2.contourArea(c) / (math.pi * radius * radius)
 		rectangleVsArea = cv2.contourArea(c) / (dA*dB)
@@ -351,9 +399,9 @@ def analyzer(url):
 			0.45, (0, 0, 255), 1)
 	
 	
-	# tempName = "test.jpg"
-	# cv2.imwrite(tempName, orig);
-	# return
+	tempName = "test.jpg"
+	cv2.imwrite(tempName, orig);
+	return
 
 	namePic = "/tmp/"+str(uuid.uuid1())+".jpg"
 	cv2.imwrite(namePic, orig);
@@ -362,4 +410,3 @@ def analyzer(url):
 	return mCoord
 
 analyzer(str(sys.argv[1]))
-

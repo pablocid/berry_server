@@ -174,7 +174,7 @@ def analyzer(url):
 		approx = cv2.approxPolyDP(c,0.01*cv2.arcLength(c,True),True)
 		area = cv2.contourArea(c)
 
-		if ((len(approx) < 9) ):
+		if ((len(approx) < 10) ):
     				continue
 
 		box = cv2.minAreaRect(c)
